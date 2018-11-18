@@ -40,11 +40,11 @@ class profiles::graylog {
       'root_password_sha2'  => '18f13ce143fda8db47f70cc469ebbd3c638efe3215f59144fb2292aee9429584',
       'web_enable'          => true,
       'web_enable_tls'      => false, 
-      'web_listen_uri'      => "http://ec2-34-216-113-121.us-west-2.compute.amazonaws.com:9000",
-      'rest_listen_uri'     => "http://ec2-34-216-113-121.us-west-2.compute.amazonaws.com:9000/api/",
-      'rest_transport_uri'  => "http://ec2-34-216-113-121.us-west-2.compute.amazonaws.com:9000/api/",
-      'elasticsearch_hosts' => 'http://ec2-52-34-245-172.us-west-2.compute.amazonaws.com:9200',
-      'mongodb_uri'         => 'mongodb://ec2-34-210-75-1.us-west-2.compute.amazonaws.com:27017/graylog',
+      'web_listen_uri'      => "http://ec2-54-185-159-47.us-west-2.compute.amazonaws.com:9000",
+      'rest_listen_uri'     => "http://ec2-54-185-159-47.us-west-2.compute.amazonaws.com:9000/api/",
+      'rest_transport_uri'  => "http://ec2-54-185-159-47.us-west-2.compute.amazonaws.com:9000/api/",
+      'elasticsearch_hosts' => 'http://ec2-35-155-235-168.us-west-2.compute.amazonaws.com:9200',
+      'mongodb_uri'         => 'mongodb://ec2-34-222-3-167.us-west-2.compute.amazonaws.com:27017/graylog',
       'mongodb_useauth'     => false,
     }
   } 

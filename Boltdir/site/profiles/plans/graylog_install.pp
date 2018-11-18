@@ -3,23 +3,18 @@ plan profiles::graylog_install (
   TargetSpec $elastic_server,
   TargetSpec $mongodb_server
 ) {
+    apply_prep($mongodb_server)
+    apply($mongodb_server) {
+      class {'profiles::mongodb' : }
+    }
 
-  apply_prep($graylog_server)
-  apply_prep($elastic_server)
-  apply_prep($mongodb_server)
+    apply_prep($elastic_server)
+    apply($elastic_server) {
+      class {'profiles::elastic' : }
+    }
 
-
-  apply($mongodb_server) {
-     class {'profiles::mongodb' : }
-  }
-
-  apply($elastic_server) {
-    class {'profiles::elastic' : }
-  }
-
-  apply($graylog_server) {
-    class {'profiles::graylog' : }
-  }
-
-
+    apply_prep($graylog_server)
+    apply($graylog_server) {
+      class {'profiles::graylog' : }
+    }
 }
