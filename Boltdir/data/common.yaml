@@ -1,0 +1,12 @@
+---
+
+yum::managed_repos:
+  - 'elastic_repo'
+yum::repos:
+  elastic_repo:
+    ensure: 'present'
+    enabled: true
+    descr: 'Elastic Repo'
+    baseurl: 'https://artifacts.elastic.co/packages/5.x/yum'
+    gpgcheck: true
+    gpgkey: 'https://artifacts.elastic.co/GPG-KEY-elasticsearch'

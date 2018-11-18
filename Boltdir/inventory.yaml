@@ -1,0 +1,20 @@
+---
+groups:
+  - name: all_nodes
+    groups:
+      - name : graylog
+        nodes:
+          - ec2-34-216-113-121.us-west-2.compute.amazonaws.com
+      - name : elastic
+        nodes:
+          - ec2-52-34-245-172.us-west-2.compute.amazonaws.com
+      - name: mongodb
+        nodes: 
+          - ec2-34-210-75-1.us-west-2.compute.amazonaws.com
+    config:
+      transport: ssh
+      ssh:
+        user: centos
+        private-key: /Users/rajesh.radhakrishnan/keys/rajeshr-controlrepo
+        host-key-check: false
+        run-as: root
